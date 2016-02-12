@@ -1,0 +1,30 @@
+
+/* Variable */
+$default-transition-duration: 0.3s;
+$color: #f39c12;
+
+/* Tools */
+@import "tools/mixins";
+
+/* Base */
+
+@import "base/base";
+@import "base/_reset";
+
+/* Layout */
+/*@import "layout/grid";*/
+
+/* Modules */  
+@import "module/header";
+ @import "module/portfolio";
+@import "module/section";
+@import "module/footer";
+
+@import "module/btn";
+@import "module/icon";
+@import "module/about";
+@import "module/progress";
+   
+@import "module/post";  
+
+                            

@@ -1,0 +1,112 @@
+/* telephone */
+.cd-image-replace {
+  /* replace text with image */
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: transparent;
+}
+.cd-nav-trigger {
+	display: block;
+	position: fixed;
+	z-index: 2;
+	bottom: 30px;
+	right: 5%;
+	height: 44px;
+	width: 44px;
+    border-radius: 0.25em;
+	background: rgba(#eaf2e3, .9);
+
+	/* reset button style */
+	cursor: pointer;
+	appearance: none;
+	border: none;
+	outline: none;
+
+	span {
+		/* central dot */
+		position: absolute;
+		height: 4px;
+		width: 4px;
+		background-color: #3a2c41;
+		border-radius: 50%;
+		left: 50%;
+         top: 50%;
+         bottom: auto;
+         right: auto;
+         transform: translateX(-50%) translateY(-50%);
+
+		&::before, &::after {
+			/* bottom and top dots */
+			content: '';
+			position: absolute;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			background-color: #3a2c41;
+			border-radius: inherit;
+		}
+
+		&::before {
+			top: -9px;
+		}
+
+		&::after {
+			bottom: -9px;
+		}
+	}
+
+	
+}
+.cd-vertical-nav {
+  position: fixed;
+  z-index: 1;
+  right: 5%;
+  bottom: 30px;
+  width: 90%;
+  max-width: 400px;
+  max-height: 90%;
+  overflow-y: auto;
+  transform: scale(0);
+  transform-origin: right bottom;
+  transition: transform 0.2s;
+  border-radius: 0.25em;
+  background-color: rgba(234, 242, 227, 0.9);
+}
+.cd-vertical-nav a {
+  display: block;
+  padding: 1em;
+  color: #3a2c41;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(58, 44, 65, 0.1);
+}
+.cd-vertical-nav a.active {
+  color: #c0a672;
+}
+.cd-vertical-nav.open {
+  transform: scale(1);
+  -webkit-overflow-scrolling: touch;
+}
+.cd-vertical-nav.open + .cd-nav-trigger {
+  background-color: transparent;
+}
+.cd-vertical-nav.open + .cd-nav-trigger span {
+  background-color: rgba(58, 44, 65, 0);
+}
+.cd-vertical-nav.open + .cd-nav-trigger span::before, .cd-vertical-nav.open + .cd-nav-trigger span::after {
+  
+  height: 3px;
+  width: 20px;
+  border-radius: 0;
+  left: -8px;
+}
+.cd-vertical-nav.open + .cd-nav-trigger span::before {
+ 
+  top: 1px;
+}
+.cd-vertical-nav.open + .cd-nav-trigger span::after {
+  
+  transform: rotate(90deg);
+  bottom: 0;
+}
