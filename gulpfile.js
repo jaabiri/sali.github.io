@@ -1,4 +1,4 @@
-var gulp = require('gulp');
+var gulp =require('gulp');
 var args = require('yargs').argv;
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();

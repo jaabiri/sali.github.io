@@ -1,13 +1,12 @@
-/* telephone */
+
 .cd-image-replace {
-  /* replace text with image */
   display: inline-block;
   overflow: hidden;
   text-indent: 100%;
   white-space: nowrap;
   color: transparent;
 }
-.cd-nav-trigger {
+.cd-nav-trigger     {
 	display: block;
 	position: fixed;
 	z-index: 2;
@@ -17,15 +16,13 @@
 	width: 44px;
     border-radius: 0.25em;
 	background: rgba(#eaf2e3, .9);
-
-	/* reset button style */
 	cursor: pointer;
 	appearance: none;
 	border: none;
 	outline: none;
 
 	span {
-		/* central dot */
+		
 		position: absolute;
 		height: 4px;
 		width: 4px;
